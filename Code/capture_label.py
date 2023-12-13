@@ -4,7 +4,7 @@ from cvzone import HandTrackingModule
 
 IMG_DIRECTORY = 'images/labelledimg/'
 
-label = input("Entree le label : ")
+label = input("Nom du label : ")
 
 num_imgs=20
 cnt_img=0 
@@ -43,7 +43,7 @@ while True:
 
         bbox_value = hands[0].get('bbox')
 
-        ## 
+        ## Capture de la zone d'interet(ROI) et enregistrement
         roi = img_copy[bbox_value[1]:bbox_value[1] + bbox_value[3], bbox_value[0]:bbox_value[0] + bbox_value[2]]
 
         output_name = "{0}/{1}/{1}_{2}.png".format(IMG_DIRECTORY,label,cnt_img)
