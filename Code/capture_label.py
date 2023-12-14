@@ -1,12 +1,20 @@
+## Création de la base de données annotées
+# ----------------------------------------------------------------------------
+# Created By  : MARIMOUTOU Mourougen / LACHEZE Enzo
+# Created Date: 13/12/2023
+# version ='1.0'
+# Subject : Création d'un traducteur automatique de langage des signes
+# Polytech Clermont 2023 - 2024
+# ---------------------------------------------------------------------------
 import os
 import cv2
 from cvzone import HandTrackingModule
 
-IMG_DIRECTORY = 'images/labelledimg/'
+## Declaration des variables globales
+IMG_DIRECTORY = 'images/labelledimg/' 
 
 label = input("Nom du label : ")
-
-num_imgs=20
+num_imgs=20 # nombre d'images prise par label
 cnt_img=0 
 
 detector = HandTrackingModule.HandDetector()
