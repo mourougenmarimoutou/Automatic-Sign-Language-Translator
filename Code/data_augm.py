@@ -26,3 +26,5 @@ p.random_distortion(probability=0.6,grid_width=4,grid_height=4,magnitude=8)
 
 p.sample(echantillon)
 
+
+## On copiera le dossier outpur généré dans le répertoire d'images_final
