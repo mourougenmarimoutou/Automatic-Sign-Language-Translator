@@ -10,10 +10,10 @@
 
 import Augmentor
 import os
-import shutil
+
 
 SRC_DIR = os.path.abspath('images/images_final')
-OUT_DIR = os.path.abspath('images/images_final/output')
+
 echantillon = 400
 
 p = Augmentor.Pipeline(SRC_DIR)
@@ -27,4 +27,4 @@ p.random_distortion(probability=0.6,grid_width=4,grid_height=4,magnitude=8)
 p.sample(echantillon)
 
 
-## On copiera le dossier outpur généré dans le répertoire d'images_final
+## On copiera le dossier output généré dans le répertoire d'images_final
