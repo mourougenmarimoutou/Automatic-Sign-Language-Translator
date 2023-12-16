@@ -12,3 +12,20 @@ import Augmentor
 import os
 
 
+
+SRC_DIR = os.path.abspath('images/images_final')
+OUT_DIR = 'images/pipelin'
+
+echantillon = 400
+
+os.makedirs(OUT_DIR, exist_ok=True)
+
+p = Augmentor.Pipeline(SRC_DIR)
+
+p.flip_top_bottom(probability=0.8)
+
+p.random_brightness(probability=0.3,min_factor=0.3,max_factor=1.2)
+
+p.random_distortion(probability=0.6,grid_width=4,grid_height=4,magnitude=8)
+
+p.sample(echantillon)
