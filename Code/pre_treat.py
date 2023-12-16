@@ -11,11 +11,13 @@ import cv2
 import numpy as np
 import os
 
-SRC_IMG_DIRECTORY=''
-OUT_IMG_DIRECTORY=''
+SRC_IMG_DIRECTORY='images'
+OUT_IMG_DIRECTORY='images/images_final'
 
 ## Creation du repertoire pour les images traiter
 os.makedirs(OUT_IMG_DIRECTORY, exist_ok=True)
+
+## Fonction du filtre gaussien
 def gauss_filter(image,filename):
 
     ## Chargement l'image
