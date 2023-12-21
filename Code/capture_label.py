@@ -54,7 +54,7 @@ while True:
         ## Capture de la zone d'interet(ROI) et enregistrement
         roi = img_copy[bbox_value[1]:bbox_value[1] + bbox_value[3], bbox_value[0]:bbox_value[0] + bbox_value[2]]
 
-        output_name = "{0}/{1}/{1}_{2}.png".format(IMG_DIRECTORY,label,cnt_img)
+        output_name = "{0}/{1}/{1}_{2}r.png".format(IMG_DIRECTORY,label,cnt_img)
         cv2.imwrite(output_name, roi)
         print("out : {}".format(output_name))
         cnt_img += 1

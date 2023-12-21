@@ -77,7 +77,7 @@ model.compile(optimizer=optimizer,loss='categorical_crossentropy',metrics=['accu
 
 # Entrainement du modèle
 
-history = model.fit(image_train, id_train, epochs=10,validation_data=(image_test, id_test))
+history = model.fit(image_train, id_train, epochs=40,validation_data=(image_test, id_test))
 
 # Visualisation des résultats
 
@@ -111,9 +111,9 @@ plt.show()
 
 # Sauvegarde du modèle
 
-model.save('model.h5')
+#model.save('modeles/model.h5')
 
-#
+
 
 
 
