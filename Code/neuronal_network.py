@@ -37,15 +37,15 @@ print(image.shape, id.shape)
 image_train, image_test, id_train, id_test = train_test_split(image, id, test_size = 0.7)
 
  # Normalisation des images
-
+id_train = to_categorical(id_train)
+id_test = to_categorical(id_test)
+print(id_train.shape, id_test.shape)
 image_train = image_train / 255.0
 image_test = image_test / 255.0
 
 # Transformation des labels en vecteurs
 
-id_train = to_categorical(id_train)
-id_test = to_categorical(id_test)
-print(id_train.shape, id_test.shape)
+
 
 # Création du modèle
 
@@ -70,13 +70,14 @@ model.summary()
 
 # Compilation du modèle
 
-model.compile(optimizer='adam',
-              loss='categorical_crossentropy',
-              metrics=['accuracy'])
+# Definition d'un taux d'appretissage faible pour un modele stable
+optimizer = tf.keras.optimizers.Adam(learning_rate=0.001)
+
+model.compile(optimizer=optimizer,loss='categorical_crossentropy',metrics=['accuracy'])
 
 # Entrainement du modèle
 
-history = model.fit(image_train, id_train, epochs=20,verbose=1,validation_data=(image_test, id_test))
+history = model.fit(image_train, id_train, epochs=10,validation_data=(image_test, id_test))
 
 # Visualisation des résultats
 
@@ -87,17 +88,25 @@ val_loss = history.history['val_loss']
 
 epochs = range(len(acc))
 
-plt.plot(epochs, acc, 'r', "Training Accuracy")
-plt.plot(epochs, val_acc, 'b', "Validation Accuracy")
-plt.title('Training and validation accuracy')
-plt.legend(['Training','Validation'])
+# Plot Accuracy
+plt.figure(figsize=(12, 5))
+plt.subplot(1, 2, 1)
+plt.plot(epochs, acc, 'r', label='Training Accuracy')
+plt.plot(epochs, val_acc, 'b', label='Validation Accuracy')
+plt.title('Training and Validation Accuracy')
+plt.xlabel('Epochs')
+plt.ylabel('Accuracy')
+plt.legend()
 
-plt.figure()
+# Plot Loss
+plt.subplot(1, 2, 2)
+plt.plot(epochs, loss, 'r', label='Training Loss')
+plt.plot(epochs, val_loss, 'b', label='Validation Loss')
+plt.title('Training and Validation Loss')
+plt.xlabel('Epochs')
+plt.ylabel('Loss')
+plt.legend()
 
-plt.plot(epochs, loss, 'r', "Training Loss")
-plt.plot(epochs, val_loss, 'b', "Validation Loss")
-plt.title('Training and validation loss')
-plt.legend(['Training','Validation'])
 plt.show()
 
 # Sauvegarde du modèle
