@@ -14,7 +14,7 @@ import os
 
 SRC_DIR = os.path.abspath('Code/images/images_final/')
 
-echantillon = 400
+echantillon = 500
 
 for directory in os.listdir(SRC_DIR):
     directory_path = os.path.join(SRC_DIR, directory)

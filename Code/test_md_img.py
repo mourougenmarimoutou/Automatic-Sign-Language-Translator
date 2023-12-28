@@ -25,14 +25,14 @@ classlabel ={
     4:"D",
     5:"hello",
     6:"merci",
-    7:"oui",
-    8:"non",
+    7:"non",
+    8:"oui",
     9:"peace"
 }
 
 # Chargement de l'image
 
-image = cv2.imread("vald/val3.jpg")
+image = cv2.imread("val/val_1r.png")
 
 
 #Prétraitements identique à l'entrainement du modèle
