@@ -6,16 +6,14 @@
 # Subject : Création d'un traducteur automatique de langage des signes
 # Polytech Clermont 2023 - 2024
 # ---------------------------------------------------------------------------
-import pandas as pd
 import numpy as np
+import os
+import cv2
 import matplotlib.pyplot as plt
 import tensorflow as tf
-import os
 from keras.preprocessing.image import ImageDataGenerator
 from sklearn.model_selection import train_test_split
 from keras.utils import to_categorical
-import cv2
-import pydot
 
 # Chargement des données images - labels
 DATA_DIR = "final"
@@ -36,15 +34,15 @@ print(image.shape, id.shape)
 # Decoupage du dataset en pourcentage
 image_train, image_test, id_train, id_test = train_test_split(image, id, test_size = 0.7)
 
- # Normalisation des images
+
+# Transformation des labels en vecteurs
 id_train = to_categorical(id_train)
 id_test = to_categorical(id_test)
 print(id_train.shape, id_test.shape)
+
+ # Normalisation des images
 image_train = image_train / 255.0
 image_test = image_test / 255.0
-
-# Transformation des labels en vecteurs
-
 
 
 # Création du modèle
