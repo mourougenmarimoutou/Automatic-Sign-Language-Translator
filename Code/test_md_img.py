@@ -11,11 +11,9 @@ import cv2
 import numpy as np
 import os
 from keras.models import load_model
-from keras.preprocessing.image import ImageDataGenerator
 
 # Chargement du modèle
-
-model = load_model('modeles/model.h5')
+model = load_model('modeles/model1v.h5')
 
 classlabel ={
     0:"A",
@@ -38,7 +36,7 @@ image = cv2.imread("val/val_1r.png")
 #Prétraitements identique à l'entrainement du modèle
 
 image=cv2.GaussianBlur(image,(5,5),0)
-image = cv2.resize(image,(100,100))
+image = cv2.resize(image,(50,50))
 image = np.array(image)/ 255.0
 image = np.expand_dims(image, axis=0)
 
