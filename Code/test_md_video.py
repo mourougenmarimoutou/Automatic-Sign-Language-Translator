@@ -24,15 +24,16 @@ model = load_model('modeles/model1v.h5')
 classlabel ={
     0:"A",
     1:"amour",
-    2:"B",
-    3:"C",
-    4:"D",
-    5:"hello",
-    6:"merci",
-    7:"non",
+    2:"C",
+    3:"I",
+    4:"L",
+    5:"W",
+    6:"y",
+    7:"hello",
     8:"oui",
     9:"peace"
 }
+
 
 while True:
     ## Capture du flux de la webcam
