@@ -68,7 +68,8 @@ while True:
         #predictions
         predictions = model.predict(image)
         class_index = np.argmax(predictions[0])
-        print(classlabel[class_index])
+        #print(classlabel[class_index])
+        
         #Affiche du texte
         cv2.putText(frame, f"{classlabel[class_index]}", (30, 30), cv2.FONT_HERSHEY_PLAIN,2,(0,255,15), 2)
 
