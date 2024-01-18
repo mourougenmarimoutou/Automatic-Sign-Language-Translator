@@ -17,7 +17,7 @@ from keras.utils import to_categorical
 # Chargement des données images - labels
 DATA_DIR = "final"
 LABELS = sorted(os.listdir(DATA_DIR))
-
+print(LABELS)
 image = []
 id = []
 for ID, label in enumerate(LABELS):
@@ -54,6 +54,10 @@ model = tf.keras.Sequential([
         tf.keras.layers.Conv2D(32, (3,3), activation ='relu'),
         tf.keras.layers.Conv2D(32, (3,3), activation ='relu'),
         tf.keras.layers.Conv2D(32, (3,3), activation ='relu'),
+        tf.keras.layers.MaxPool2D((2,2)),
+        tf.keras.layers.Conv2D(64, (3,3), activation ='relu'),
+        tf.keras.layers.Conv2D(64, (3,3), activation ='relu'),
+        tf.keras.layers.Conv2D(64, (3,3), activation ='relu'),
         tf.keras.layers.Flatten(),
         tf.keras.layers.Dense(128, activation='relu'),
         tf.keras.layers.Dense(10, activation='softmax')
@@ -63,7 +67,7 @@ model.summary()
 
 # Compilation du modèle
 # Definition d'un taux d'apprentissage faible pour un modele stable
-optimizer = tf.keras.optimizers.Adam(learning_rate=0.01)
+optimizer = tf.keras.optimizers.Adam(learning_rate=0.001)
 
 model.compile(optimizer=optimizer,loss='categorical_crossentropy',metrics=['accuracy'])
 
@@ -107,7 +111,7 @@ test_loss, test_acc = model.evaluate(image_test, id_test)
 print(f"Test Accuracy: {test_acc}, Test Loss: {test_loss}")
 
 # Sauvegarde du modèle
-model.save('modeles/model.h5')
+model.save('modeles/model1801v2.h5')
 
 
 

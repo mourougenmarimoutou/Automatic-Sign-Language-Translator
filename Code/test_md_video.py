@@ -18,17 +18,17 @@ capture = cv2.VideoCapture(0)
 detector = HandTrackingModule.HandDetector()
 
 # Chargement du modèle
-model = load_model('modeles/model1v.h5')
+model = load_model('modeles/model1801v2.h5')
 
 # Déclaration des classes
 classlabel ={
     0:"A",
-    1:"amour",
-    2:"C",
-    3:"I",
-    4:"L",
-    5:"W",
-    6:"y",
+    1:"C",
+    2:"I",
+    3:"L",
+    4:"W",
+    5:"Y",
+    6:"amour",
     7:"hello",
     8:"oui",
     9:"peace"
