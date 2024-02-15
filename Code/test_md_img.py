@@ -13,7 +13,7 @@ import os
 from keras.models import load_model
 
 # Chargement du modèle
-model = load_model('modeles/model.h5')
+model = load_model('modeles/model1801v2.h5')
 
 # Déclaration des classe
 classlabel ={
@@ -30,7 +30,7 @@ classlabel ={
 }
 
 # Chargement de l'image
-image = cv2.imread("val/val_2m.png")
+image = cv2.imread("val/val_3.png")
 
 
 #Prétraitements identique à l'entrainement du modèle

@@ -11,7 +11,7 @@ import cv2
 from cvzone import HandTrackingModule
 
 ## Declaration des variables globales
-IMG_DIRECTORY = 'images/labelledimg/' 
+IMG_DIRECTORY = 'val' 
 
 label = input("Nom du label : ")
 num_imgs=20 # nombre d'images prise par label
@@ -54,7 +54,7 @@ while True:
         ## Capture de la zone d'interet(ROI) et enregistrement
         roi = img_copy[bbox_value[1]:bbox_value[1] + bbox_value[3], bbox_value[0]:bbox_value[0] + bbox_value[2]]
 
-        output_name = "{0}/{1}/{1}_{2}m.png".format(IMG_DIRECTORY,label,cnt_img)
+        output_name = "{0}/{1}/{1}_{2}.png".format(IMG_DIRECTORY,label,cnt_img)
         cv2.imwrite(output_name, roi)
         print("out : {}".format(output_name))
         cnt_img += 1
