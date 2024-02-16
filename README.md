@@ -12,3 +12,5 @@ Ce projet se sépare en 3 grosses étapes :
 - Tester le modéle
 
 Nous avons donc créer plusieurs scripts afin de créer une base de données labélisé, qui sera ensuite étendu à l'aide de l'augmentations de données. Ces données serviront ensuite à entrainer un modéle de reconnaissance. qui sera ensuite tester sur des images fixes et enfin sur un flux vidéo continu.
+
+## Demonstration
