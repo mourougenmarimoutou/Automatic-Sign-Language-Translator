@@ -14,5 +14,5 @@ Ce projet se sépare en 3 grosses étapes :
 Nous avons donc créer plusieurs scripts afin de créer une base de données labélisé, qui sera ensuite étendu à l'aide de l'augmentations de données. Ces données serviront ensuite à entrainer un modéle de reconnaissance. qui sera ensuite tester sur des images fixes et enfin sur un flux vidéo continu.
 
 ## Demonstration
-[video demo enzo](https://drive.google.com/file/d/1IUEPuXC0BY2ZztWsQFuXbp-VlOpX7om9/view?usp=sharing)
+[video demo enzo](https://drive.google.com/file/d/1IUEPuXC0BY2ZztWsQFuXbp-VlOpX7om9/view?usp=sharing)   
 [video demo mourougen](https://drive.google.com/file/d/16E0bgTHd-JJHCMJS1ldJfBosq-CXVAIT/view?usp=sharing)
