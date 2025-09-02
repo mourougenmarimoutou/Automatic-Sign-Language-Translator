@@ -1,17 +1,27 @@
 # Automatic Sign Language Translator
 
 ## Introduction
-Ce projet à était réalisé dans le cadre d'imagerie numérique, cours suivi dans le cadre du module Polycompétences.
-Le but de ce projet est de réaliser un traducteur automatique de langage des signes. 
-Cela portera donc sur la détéction et la reconnaissance de signes capturé à l'aide de la caméra d'un PC.
+This project was carried out as part of the *Computer Vision* course within the Polycompétences program at Polytech Clermont.  
+The objective is to design an automatic sign language translator capable of detecting and recognizing signs captured through a computer camera.
 
-## Travail réalisé
-Ce projet se sépare en 3 grosses étapes :
-- Créer une base de données labélisé importante
-- Créer et entrainer un réseau de neurones afin d'avoir un modéle de détéction
-- Tester le modéle
+## Work Completed
+The project was divided into three main stages:
+1. Building a large, labeled dataset  
+2. Designing and training a neural network for sign detection  
+3. Evaluating and testing the model  
 
-Nous avons donc créer plusieurs scripts afin de créer une base de données labélisé, qui sera ensuite étendu à l'aide de l'augmentations de données. Ces données serviront ensuite à entrainer un modéle de reconnaissance. qui sera ensuite tester sur des images fixes et enfin sur un flux vidéo continu.
+To achieve this, we developed several scripts to generate a labeled dataset, later expanded using data augmentation techniques.  
+The dataset was then used to train a recognition model, which was tested first on still images and later on live video streams.
+
+---
+
+## Skills and Competencies
+Through this project, we gained practical experience in:  
+- **Computer Vision**: image acquisition, preprocessing, and real-time video processing  
+- **Deep Learning**: dataset creation, data augmentation, neural network training, and evaluation  
+- **Software Development**: scripting in Python, modular design, and testing  
+- **Teamwork & Project Management**: collaborative development and iterative testing  
+
 
 ## Demonstration
 [video demo enzo](https://drive.google.com/file/d/1IUEPuXC0BY2ZztWsQFuXbp-VlOpX7om9/view?usp=sharing)   
